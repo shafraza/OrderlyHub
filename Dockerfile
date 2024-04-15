@@ -28,7 +28,7 @@ RUN pip install --no-cache-dir --upgrade pip==24.0
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Clone Django repository
-RUN git clone --depth 1 --branch <branch_or_tag> https://github.com/django/django.git /app/django
+RUN git clone --depth 1 --branch main https://github.com/django/django.git /app/django
 
 # Copy the current directory contents into the container at /app/
 COPY . /app/
