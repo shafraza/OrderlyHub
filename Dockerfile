@@ -23,6 +23,9 @@ COPY requirements.txt /app/
 # Install the dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Clone Django repository
+RUN git clone --depth 1 --branch <branch_or_tag> https://github.com/django/django.git /app/django
+
 # Copy the current directory contents into the container at /app/
 COPY . /app/
 
