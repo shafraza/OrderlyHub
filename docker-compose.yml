@@ -3,7 +3,6 @@ version: '3'
 services:
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
     ports:
       - "8000:8000"
     volumes:
@@ -11,11 +10,14 @@ services:
     depends_on:
       - db
     environment:
-      - DJANGO_SETTINGS_MODULE=your_project_name.settings.development
+      - DJANGO_SETTINGS_MODULE=OrderlyHub.settings
+      - POSTGRES_DB=my_database_name
+      - POSTGRES_USER=my_username
+      - POSTGRES_PASSWORD=my_password
 
   db:
     image: postgres:latest
     environment:
-      POSTGRES_DB: your_database_name
-      POSTGRES_USER: your_username
-      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: my_database_name
+      POSTGRES_USER: my_username
+      POSTGRES_PASSWORD: my_password
