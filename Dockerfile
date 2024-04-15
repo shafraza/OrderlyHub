@@ -12,6 +12,7 @@ RUN apt-get update \
         default-libmysqlclient-dev \
         pkg-config \
         libmariadb-dev-compat \
+        gcc \
     && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory in the container
