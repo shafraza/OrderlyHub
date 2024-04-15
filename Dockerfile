@@ -10,6 +10,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         git \
         default-libmysqlclient-dev \
+        pkg-config \
+        libmariadb-dev-compat \   # Install MariaDB development files as an alternative to libmysqlclient-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory in the container
