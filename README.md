@@ -17,6 +17,26 @@ Welcome to OrderlyHub, the Django Inventory and Order Management System! This pr
 - **Python 3**: The programming language used for writing the backend logic and API endpoints.
 - **Docker**: A containerization platform that simplifies the deployment process by packaging applications and their dependencies into containers.
 
+## Hexagonal Architecture
+
+OrderlyHub follows the principles of hexagonal architecture to achieve a modular, flexible, and testable design. Here's how the architecture is reflected in the project's code structure:
+
+- **Core Business Logic**: Represented by models, views, and other components within the Django app. This is where essential business rules and operations, such as managing articles and orders, reside.
+
+- **Ports (Interfaces)**: Correspond to the API endpoints defined in views. These endpoints act as ports through which external systems, like clients consuming the API, interact with the application.
+
+- **Adapters**:
+  - **Serializers**: Located in "serializers.py" files, these adapters translate data between the core business logic (models) and external systems (API clients).
+  - **Views**: Serve as adapters by handling HTTP requests and responses. They translate incoming HTTP requests into method calls on the core business logic and outgoing responses into HTTP responses.
+  - **Database Adapters**: Represented by Django's ORM, these adapters connect the core business logic to the database, allowing data persistence and retrieval.
+
+- **Independence of Frameworks**: The core business logic remains independent of any specific frameworks or technologies. It's encapsulated within the Django app's models and views, enabling easier migration, testing, and evolution of the system.
+
+- **Testability**: Hexagonal architecture promotes testability by isolating the core business logic from external dependencies. You can write unit tests for models and views without needing to involve external systems like databases or APIs.
+
+By adhering to hexagonal architecture principles, OrderlyHub achieves a modular, flexible, and testable design, with clear separation of concerns between the core business logic and external interfaces.
+
+
 ## Setup Instructions
 
 ### Using Docker
