@@ -24,8 +24,8 @@ Welcome to OrderlyHub, the Django Inventory and Order Management System! This pr
 To set up and run OrderlyHub using Docker, follow these steps:
 
 1. **Clone the Repository**: 
-git clone https://github.com/your-username/orderlyhub.git
-cd orderlyhub
+git clone https://github.com/shafraza/OrderlyHub.git
+cd OrderlyHub
 
 2. **Build Docker Image**: 
 docker build -t orderlyhub .
