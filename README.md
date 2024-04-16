@@ -39,7 +39,7 @@ By adhering to hexagonal architecture principles, OrderlyHub achieves a modular,
 
 ## Setup Instructions
 
-### Using Docker
+### Docker
 
 To set up and run OrderlyHub using Docker, follow these steps:
 
