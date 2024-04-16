@@ -58,9 +58,6 @@ docker run -p 8000:8000 orderlyhub
 4. **Access the API**:
 Visit `http://127.0.0.1:8000/api/` in your browser to access the API endpoints for managing articles and orders.
 
-### Without Docker
-
-If you prefer not to use Docker, you can follow the setup instructions mentioned earlier in the README.
 
 ## API Documentation
 
